@@ -17,6 +17,7 @@ class InfoTable(models.Model):
     longitude = models.FloatField()
     weather = models.CharField(max_length=45)
     # videoid = models.ForeignKey('VideoTable', on_delete=models.CASCADE)
+
     class Meta:
         managed = False
         db_table = 'infos'

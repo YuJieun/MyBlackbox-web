@@ -27,7 +27,12 @@
           </thead>
           <tbody>
             {% for info in infos %}
+            {% if info.match == 1%}
+            <tr style="font-weight:bold;">
+            {% else %}
             <tr>
+            {%endif%}
+
               {% with offset=info.frame|mul:0.116 %}
               <td>{{ total_second|add:offset|intdiv:3600 }}시 {{ total_second|add:offset|mod:3600|intdiv:60 }}분 {{ total_second|add:offset|mod:3600|mod:60 }}초 </td>
               {% endwith %}

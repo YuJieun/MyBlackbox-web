@@ -30,7 +30,7 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
     second = video.path[52:54]
 
     total_second = int(second) + 60*int(minute) + 3600*int(hour)
-    filter_arr=[object, color, direction, weather, lati, longi]
+    filter_arr=[object, direction, weather, lati, longi, color]
 
     for info in infos:
         lat = info.latitude
@@ -43,23 +43,43 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
         info.location = match_first
         print(info.location)
 
-        info_arr = [info.object, info.color, info.direction, info.weather, info.latitude, info.longitude]
+        info_arr = [info.object, info.direction, info.weather, info.latitude, info.longitude, info.color]
 
         i=-1
-        ch=0
+        ch=-1
+        info.match = 0
         for tmp in filter_arr:
             i+=1
-            if tmp=="default":
-                ch+=1
-                continue
-            if tmp == info_arr[i]:
-                continue
-            else:
+            if i == 5 and ch != 5:
+                if tmp == "default":
+                    info.match = 1
+                elif tmp == "black":
+                    if info.color == "Black":
+                        info.match = 1
+                elif tmp == "greenblue":
+                    if info.color == "Green":
+                        info.match = 1
+                    if "Blue" in info.color:
+                        info.color = "Blue"
+                        info.match = 1
+                elif tmp == "browngold":
+                    if info.color == "Brown" or info.color == "Gold":
+                        info.match = 1
+                elif color == "purplered":
+                    if info.color == "Purple" or info.color == "Red":
+                        info.match = 1
+                elif color == "silverwhite":
+                    if info.color == "Silver":
+                        info.match = 1
+                    if "White" in info.color:
+                        info.color = "White"
+                        info.match = 1
+
+            elif tmp == "default":
+                ch += 1
+            elif tmp != info_arr[i]:
                 break
-        if i==5 and ch!=6:
-            info.match = 1
-        else:
-            info.match = 0
+
 
     context = {
         'date': t_date,
@@ -115,7 +135,7 @@ def search(request,date,object,color,direction,weather,lati,longi):
         elif color == "purplered":
             infos = infos.filter(color__in=["Purple", "Red"])
         elif color == "silverwhite":
-            infos = infos.filter(color__in=["Silver", "White1", "White2"])
+            infos = infos.filter(color__in=["Silver", "White"])
 
     if direction != "default":
         if direction == "left":
@@ -126,15 +146,15 @@ def search(request,date,object,color,direction,weather,lati,longi):
             infos = infos.filter(direction=direction)
 
     if weather != "default":
-        if weather == "clear":
+        if weather == "Clear":
             infos = infos.filter(weather__in=["Clear"])
-        elif weather == "clouds":
+        elif weather == "Clouds":
             infos = infos.filter(weather__in=["Mist", "Haze", "Clouds", "Dust", "Fog"])
-        elif weather == "rain":
+        elif weather == "Rain":
             infos = infos.filter(weather__in=["Rain", "Squall"])
-        elif weather == "snow":
+        elif weather == "Snow":
             infos = infos.filter(weather__in=["Snow"])
-        elif weather == "thunderstorm":
+        elif weather == "Thunderstorm":
             infos = infos.filter(weather__in=["Thunderstorm"])
 
 
