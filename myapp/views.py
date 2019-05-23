@@ -7,6 +7,7 @@ import json
 from django.contrib.auth.models import User
 from myapp.models import VideoTable, InfoTable
 import requests
+from math import *
 
 @login_required
 def index(request):
@@ -21,6 +22,12 @@ def index(request):
     return render(request, 'layout/main.html', context)
 
 def detail(request,videoid, date, object, color, direction, weather, lati, longi):
+    # list =[]
+    if request.method == 'POST':
+        list = request.POST.get('data')
+        print(list)
+
+
     infos = InfoTable.objects.filter(videoid=videoid)
     video = VideoTable.objects.get(id=videoid)
     videopath = video.path[26:]
@@ -43,7 +50,7 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
         info.location = match_first
         print(info.location)
 
-        info_arr = [info.object, info.direction, info.weather, info.latitude, info.longitude, info.color]
+        info_arr = [info.object, info.direction, info.weather, info.color]
 
         i=-1
         ch=-1
@@ -80,6 +87,21 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
             elif tmp != info_arr[i]:
                 break
 
+        if lati == "default" and longi == "default":
+            pass
+        else:
+            for info in infos:
+                lat = info.latitude
+                lon = info.longitude
+
+                if (6371 * acos(cos(radians(float(lati))) * cos(radians(lat)) * cos(radians(lon)- radians(float(longi))) + sin(radians(float(lati))) * sin(radians(lat)))) <= 0.3:
+                    info.match = 1
+                else:
+                    info.match = 0
+
+
+
+
 
     context = {
         'date': t_date,
@@ -89,14 +111,10 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
         'total_second': total_second,
         'infos': infos,
         'video': video,
-        'videopath': videopath,
-
-
+        'videopath': videopath
     }
 
     return render(request,'layout/detail.html', context)
-
-
 
 
 def search(request,date,object,color,direction,weather,lati,longi):
@@ -157,17 +175,28 @@ def search(request,date,object,color,direction,weather,lati,longi):
         elif weather == "Thunderstorm":
             infos = infos.filter(weather__in=["Thunderstorm"])
 
-
-
-
-
+    # [{1:[1,2,3]},{5:[1,3,4]}]
+    # test = {}
+    # tests = []
+    # tests.append(test)
+    #
     ids=[]
-    # videoByInfo = [{1'':[in.id, info2], '2':[]}]
-
+    # i_ids={}
+    # # videoByInfo = [{1'':[in.id, info2], '2':[]}]
+    # testnum = -1
     for info in infos:
         print(info.color)
         if info.videoid not in ids:
+    #         tests.append({info.videoid:[info.]})
             ids.append(info.videoid)
+    #         testnum += 1
+    #     else
+    #
+    #         # i_ids[info]
+    #         # tests[]
+
+
+
 
     pathvideo = VideoTable.objects.filter(id__in=ids)
 
@@ -176,6 +205,16 @@ def search(request,date,object,color,direction,weather,lati,longi):
     # print(len(pathvideo))
 
     #infos = InfoTable.objects.filter(videoid__in=videos, color=color, location=location, object=object)
+
+    # info1 = {'videoid': 1, 'object':'car1', 'score':70}
+    # info2 = {'videoid': 2, 'object':'car2', 'score':80}
+    # info3 = {'videoid': 3, 'object':'car3', 'score':90}
+    # tests[0] = [info1, info2, info3]
+    # test[0].append(info1)
+    # test[0].append(info2)
+    # test[0].append(info3)
+    # test[1] = [info1, info1, info1]
+    # test[2] = [info2, info2, info2]
 
     context = {
         'tag': 1,
@@ -186,7 +225,8 @@ def search(request,date,object,color,direction,weather,lati,longi):
         'direction': direction,
         'weather': weather,
         'lati': lati,
-        'longi': longi
+        'longi': longi,
+        'infos': infos,
         # 'pathvideo': pathvideo #받을때 pathvideo.path로..
     }
     return render(request, 'layout/main.html', context)
