@@ -37,7 +37,7 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
     second = video.path[52:54]
 
     total_second = int(second) + 60*int(minute) + 3600*int(hour)
-    filter_arr=[object, direction, weather, lati, longi, color]
+    filter_arr=[object, direction, weather,  color]
 
     for info in infos:
         lat = info.latitude
@@ -57,9 +57,13 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
         info.match = 0
         for tmp in filter_arr:
             i+=1
-            if i == 5 and ch != 5:
+            # if i == 3 and ch != 3:
+            if i == 3:
                 if tmp == "default":
-                    info.match = 1
+                    if ch !=2:
+                        info.match = 1
+                    elif ch==2:
+                        info.match = 0
                 elif tmp == "black":
                     if info.color == "Black":
                         info.match = 1
@@ -102,7 +106,8 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
 
 
 
-
+    for info in infos:
+        print(info.frame)
     context = {
         'date': t_date,
         'hour': hour,
