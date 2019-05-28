@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f9f7af1-5f48-48b1-aee0-14bf6849fd9f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/myapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/static/css/pure-css-select-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myapp/static/images/map_icon2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myapp/static/css/datepicker3.css" beforeDir="false" afterPath="$PROJECT_DIR$/myapp/static/css/datepicker3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/main.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4071856">
+    <splitter split-orientation="horizontal" split-proportion="0.24457216">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -51,8 +56,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/myapp/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1954">
-                  <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+                <state relative-caret-position="448">
+                  <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="36" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                   </folding>
@@ -74,33 +79,28 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/layout/main.html">
+            <entry file="file://$PROJECT_DIR$/templates/layout/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-3781">
-                  <caret line="111" column="52" lean-forward="true" selection-start-line="111" selection-end-line="112" />
+                <state relative-caret-position="214">
+                  <caret line="80" column="37" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="44" />
                   <folding>
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#select#3;n#div#1;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#strong#0;n#a#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/layout/detail.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="181">
-                  <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+                <state relative-caret-position="168">
+                  <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
                   <folding>
                     <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
+                    <element signature="e#245#251#0" expanded="true" />
+                    <element signature="e#257#263#0" expanded="true" />
+                    <element signature="e#275#281#0" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#video#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
@@ -110,11 +110,36 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/layout/base.html">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/layout/main.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="616">
-                  <caret line="107" column="21" lean-forward="true" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
+                <state relative-caret-position="476">
+                  <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+                  <folding>
+                    <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#h1#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#select#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#select#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#select#3;n#div#1;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                    <element signature="e#4424#4430#0" expanded="true" />
+                    <element signature="e#4430#4436#0" expanded="true" />
+                    <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                    <element signature="e#5545#5551#0" expanded="true" />
+                    <element signature="e#5551#5557#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -133,16 +158,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>+</find>
-      <find>get</find>
-      <find>getdate</find>
-      <find>mb-4</find>
-      <find>detect_colo</find>
-      <find>tag</find>
-      <find>save_count</find>
-      <find>rla</find>
-      <find>save_vid</find>
-      <find>insert</find>
       <find>sql</find>
       <find>save_vi</find>
       <find>save</find>
@@ -161,8 +176,18 @@
       <find>find</find>
       <find>detect_color</find>
       <find>myVideo</find>
-      <find>latitude</find>
       <find>init</find>
+      <find>default-w-line</find>
+      <find>theme-square</find>
+      <find>latitude</find>
+      <find>.datepicker</find>
+      <find>jum</find>
+      <find>.badge</find>
+      <find>margin-left:3px</find>
+      <find>margin-left:3px;</find>
+      <find>nav-pills</find>
+      <find>jumbotron</find>
+      <find>dddddd</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -183,10 +208,8 @@
         <option value="C:/tf_object_detection_api/object_detection/find_color.py" />
         <option value="C:/tf_object_detection_api/object_detection/lane_detection.py" />
         <option value="C:/tf_object_detection_api/object_detection/lane_detect.py" />
-        <option value="$PROJECT_DIR$/myapp/static/css/album.css" />
         <option value="$PROJECT_DIR$/myapp/static/js/holder.min.js" />
         <option value="$PROJECT_DIR$/myapp/static/js/popper.min.js" />
-        <option value="$PROJECT_DIR$/myapp/static/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/myapp/static/css/signin.css" />
         <option value="$PROJECT_DIR$/templates/registration/login.html" />
         <option value="C:/tf_object_detection_api/object_detection/lane_test.py" />
@@ -196,17 +219,21 @@
         <option value="C:/tf_object_detection_api/object_detection/d2.py" />
         <option value="$PROJECT_DIR$/myapp/static/js/videocontrol.js" />
         <option value="$PROJECT_DIR$/myapp/static/css/videocontrol.css" />
-        <option value="$PROJECT_DIR$/myapp/static/css/datepicker3.css" />
         <option value="C:/tf_object_detection_api/object_detection/object_detection_homework2.py" />
         <option value="C:/tf_object_detection_api/object_detection/utils/visualization_utils.py" />
         <option value="$PROJECT_DIR$/myapp/urls.py" />
         <option value="C:/tf_object_detection_api/object_detection/utils/find_color.py" />
         <option value="$PROJECT_DIR$/myapp/models.py" />
         <option value="$PROJECT_DIR$/myblackbox/settings.py" />
-        <option value="$PROJECT_DIR$/templates/layout/base.html" />
-        <option value="$PROJECT_DIR$/templates/layout/main.html" />
         <option value="$PROJECT_DIR$/myapp/views.py" />
         <option value="$PROJECT_DIR$/templates/layout/detail.html" />
+        <option value="$PROJECT_DIR$/myapp/static/css/pure-css-select-style.css" />
+        <option value="$PROJECT_DIR$/myapp/static/css/datepicker3.css" />
+        <option value="$PROJECT_DIR$/templates/layout/base.html" />
+        <option value="$PROJECT_DIR$/myapp/static/css/album.css" />
+        <option value="$PROJECT_DIR$/myapp/static/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/myapp/static/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/templates/layout/main.html" />
       </list>
     </option>
   </component>
@@ -250,6 +277,20 @@
             <path>
               <item name="myblackbox" type="b2602c69:ProjectViewProjectNode" />
               <item name="myblackbox" type="462c0819:PsiDirectoryNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblackbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblackbox" type="462c0819:PsiDirectoryNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myblackbox" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myblackbox" type="462c0819:PsiDirectoryNode" />
               <item name="myblackbox" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -281,14 +322,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Django\myblackbox\myapp" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Django\myblackbox\myapp\static\css" />
       <recent name="C:\Django\myblackbox\myapp\static\js" />
       <recent name="C:\Django\myblackbox\myapp\static\images" />
       <recent name="C:\Django\myblackbox\tenplates\registration" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Django\myblackbox\myapp\static\images" />
+      <recent name="C:\Django\myblackbox\myapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -322,7 +364,7 @@
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.032139093" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.17492098" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -405,13 +447,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://C:/tf_object_detection_api/object_detection/lane_detection.py" />
-    <entry file="file://$PROJECT_DIR$/myapp/static/css/album.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myapp/static/js/popper.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -427,11 +462,6 @@
         <state relative-caret-position="299">
           <caret line="1960" column="1" selection-start-line="1960" selection-start-column="1" selection-end-line="1960" selection-end-column="1" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/static/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2436" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/static/css/bootstrap.css.map">
@@ -457,13 +487,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp.models.py" />
-    <entry file="file://$PROJECT_DIR$/myapp/static/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="6454" column="27" lean-forward="true" selection-start-line="6454" selection-start-column="20" selection-end-line="6454" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myapp/static/js/bootstrap-datepicker.kr.js" />
     <entry file="file://$PROJECT_DIR$/myapp/static/css/bootstrap-datepicker.min.css" />
     <entry file="file://$PROJECT_DIR$/myapp/static/css/bootstrap-datepicker.css" />
@@ -572,13 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/static/css/datepicker3.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -620,39 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="107" column="21" lean-forward="true" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layout/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3781">
-          <caret line="111" column="52" lean-forward="true" selection-start-line="111" selection-end-line="112" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#3;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/tf_object_detection_api/object_detection/temp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -673,16 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1954">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/tf_object_detection_api/object_detection/object_detection_homework2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -693,16 +666,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/static/css/datepicker3.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/static/css/pure-css-select-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="97" column="18" lean-forward="true" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/static/css/album.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="5091" column="1" lean-forward="true" selection-start-line="5091" selection-start-column="1" selection-end-line="5091" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/static/css/bootstrap.min.css.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret column="561365" selection-start-column="561356" selection-end-column="561365" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/static/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="751">
+          <caret line="5" column="85773" selection-start-line="5" selection-start-column="85773" selection-end-line="5" selection-end-column="85773" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="80" column="37" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#strong#0;n#a#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/layout/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="168">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#!!top" expanded="true" />
+            <element signature="e#245#251#0" expanded="true" />
+            <element signature="e#257#263#0" expanded="true" />
+            <element signature="e#275#281#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#video#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="36" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layout/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#3;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#4424#4430#0" expanded="true" />
+            <element signature="e#4430#4436#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#5545#5551#0" expanded="true" />
+            <element signature="e#5551#5557#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,41 +1,39 @@
 {% extends 'layout/base.html' %}
 
 {% block content %}
-  <section class="jumbotron text-center">
+  <section class="jumbotron text-center" style="background-color:#ffffff;">
     <div class="container">
-      <h1 class="jumbotron-heading">Your Blackbox</h1>
-      <p class="lead text-muted"> 지금 당신의 블랙박스 영상을 확인하세요. 간단한 클릭으로 영상을 쉽게 검색할 수 있습니다. object detection 결과 등을 검색하세요.</p>
+      <h1 class="jumbotron-heading" style="font-family: 'Quicksand', sans-serif;">Your Blackbox</h1>
+      <p class="lead text-muted" style="font-family: 'Noto Serif KR', serif;"> 지금 당신의 블랙박스 영상을 확인하세요.</p>
     </div>
   </section>
-  <div style="padding-left:450px">
-    <div class="form-group" style="margin-right:10px; float:left;">
+  <div style="padding-left:480px">
+    <div class="form-group" style="margin-right:20px; float:left;">
         <div class=" date" id="date_block">
-            <div class="input-group input-append date" id="datePicker" style="width:270px;">
-                <input value="날짜" type="text" class="form-control" name="date"  id="test"/>
-                <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+            <div class="input-group input-append date theme-square" id="datePicker" style="width:150px; border-radius:11px;">
+                <input value="날짜" type="text" class="form-control theme-square" name="date"  id="test" style="border:none; font-weight:bold; font-size:12pt;"/>
+                <span class="input-group-addon add-on" style="border:none; background-color:#ffffff;"><span class="glyphicon glyphicon-calendar"></span></span>
             </div>
         </div>
     </div>
     <div style="float:left;">
-      <select id="object" text="car" style="width:150px; height:35px; border-radius: 4px; margin-right:10px;" onchange="getobject(this)">
-        <option value="default">대상</option>
-        <option value="car">자동차</option>
-        <option value="person">사람</option>
-        <option value="bicycle">자전거</option>
-        <option value="motorcycle">오토바이</option>
-        <option value="bus">버스</option>
-        <option value="dog">개</option>
-        <option value="cat">고양이</option>
-      </select>
-
-      <select id="direction" style="width:150px; height:35px; border-radius: 4px; margin-right:10px;" >
+        <select class="theme-square" id="object" text="car" style="width:150px; height:35px; border-radius: 4px; margin-right:20px;" onchange="getobject(this)">
+          <option value="default">대상</option>
+          <option value="car">자동차</option>
+          <option value="person">사람</option>
+          <option value="bicycle">자전거</option>
+          <option value="motorcycle">오토바이</option>
+          <option value="bus">버스</option>
+          <option value="dog">개</option>
+          <option value="cat">고양이</option>
+        </select>
+     <select class="theme-square" id="direction" style="width:150px; height:35px; border-radius: 4px; margin-right:20px;" >
         <option value="default">방향</option>
         <option value="left">left</option>
         <option value="front">front</option>
         <option value="right">right</option>
       </select>
-
-      <select id="color" disabled style="width:150px; height:35px; border-radius: 4px; margin-right:10px;   background: #dddddd; color:#eeeeee;">
+      <select class="theme-square" id="color" disabled style="width:150px; height:35px; border-radius: 4px; margin-right:20px; color:#ccc;">
         <option value="default">자동차 색깔</option>
         <option value="black">black</option>
         <option value="greenblue">green/blue</option>
@@ -43,8 +41,7 @@
         <option value="purplered">purple/red</option>
         <option value="silverwhite">silver/white</option>
       </select>
-
-      <select id="weather" style="width:150px; height:35px; border-radius: 4px; margin-right:10px;">
+      <select class="theme-square" id="weather" style="width:150px; height:35px; border-radius: 4px; margin-right:20px;">
         <option value="default">날씨</option>
         <option value="Clear">맑음</option>
         <option value="Clouds">흐림</option>
@@ -53,7 +50,7 @@
         <option value="Thunderstrom">천둥</option>
       </select>
     </div>
-    <input type="image" src="/static/images/map_icon.JPG" style="width:35px; margin-right:10px;" id="mapicon">
+    <input type="image" src="/static/images/map_icon2.png" style="width:35px; margin-right:20px;" id="mapicon">
     <!-- The Modal -->
     <div id="myModal" class="map_modal">
       <!-- Modal content -->
@@ -80,7 +77,7 @@
                     <!--<source src="/static/videos/output_test.mp4" type="video/mp4" >-->
                   <!--</video>-->
                   <div class="card-body">
-                    <p class="card-text">{{ video.path | slice:"41:-4" }}</p>
+                    <p class="card-text" style="font-family: 'Noto Serif KR', serif; font-weight:bold; font_size:15pt; text-align:center;">{{ video.path | slice:"41:-11" }}&nbsp;&nbsp; {{ video.path | slice:"48:50" }}:{{ video.path | slice:"50:52" }}</p>
                   </div>
                 </div>
               </div>
@@ -96,8 +93,7 @@
                   <!--<img class="card-img-top" src="/static/thumbnails/{{ id }}.jpg" alt="Card image cap" onclick="click_video({{id}})" />-->
                   <img class="card-img-top" src="/static/thumbnails/{{ id }}.jpg" alt="Card image cap" onclick="location.href='/detail/{{ id }}/{{ date }}/{{object}}/{{color}}/{{direction}}/{{weather}}/{{lati}}/{{longi}}/'">
                   <div class="card-body">
-                    <p class="card-text">{{ path.path | slice:"41:-4" }}</p>
-
+                    <p class="card-text" style="font-family: 'Noto Serif KR', serif; font-weight:bold; font_size:15pt; text-align:center;">{{ path.path | slice:"41:-11" }}&nbsp;&nbsp; {{ path.path | slice:"48:50" }}:{{ path.path | slice:"50:52" }}</p>
                   </div>
                 </div>
               </div>
@@ -131,8 +127,8 @@
         }else{
             $("#color").val('default');
             $("#color").attr('disabled', 'disabled');
-            $("#color").css('background','#dddddd');
-            $("#color").css('color','#eeeeee');
+            $("#color").css('background','#ffffff');
+            $("#color").css('color','#ccc');
         }
        }
 
@@ -263,8 +259,8 @@
         }else{
             $("#color").val('default');
             $("#color").attr('disabled', 'disabled');
-            $("#color").css('background','#dddddd');
-            $("#color").css('color','#eeeeee');
+            $("#color").css('background','#ffffff');
+            $("#color").css('color','#ccc');
         }
     }
 
