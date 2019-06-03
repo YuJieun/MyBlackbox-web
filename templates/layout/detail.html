@@ -4,7 +4,7 @@
 {% block content %}
 <!--<link rel="stylesheet" href="/static/css/videocontrol.css">-->
 <!--<script src="/static/css/videocontrol.js"></script>-->
-<h2 style="text-align:center;"> {{ date }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ hour }}:{{ minute }}:{{ second }}</h2>
+<h2 style="text-align:center; font-family: 'Noto Serif KR', serif;"> {{ date }}&nbsp;&nbsp;&nbsp;{{ hour }}:{{ minute }}:{{ second }}에 기록</h2>
 <br>
 <div style="text-align:center;">
 <video id="testvideo" controls width="1300px" style="padding-left:50px; ">
@@ -12,8 +12,8 @@
 </video><br>
 </div><br><br><br>
 
-  <h2>Data List</h2>
-      <div class="table-responsive" style="text-align:left;">
+  <h2 style="font-family: 'Quicksand', sans-serif;">Data List</h2>
+      <div class="table-responsive" style="text-align:left; font-family: 'Noto Serif KR', serif; ">
         <table class="table table-striped table-sm" id="detail-table">
           <thead>
             <tr>
@@ -29,7 +29,7 @@
           <tbody>
             {% for info in infos %}
             {% if info.match == 1%}
-            <tr onclick="setCurTime({{info.frame}})"style="font-weight:bold;">
+            <tr onclick="setCurTime({{info.frame}})" style="background:#fffacb; ">
             {% else %}
             <tr onclick="setCurTime({{info.frame}})">
             {%endif%}
@@ -43,7 +43,7 @@
               {% if info.color == "None" %}
                 <td>-</td>
               {% else %}
-                <td>{{ info.color }} {{info.match}}</td>
+                <td>{{ info.color }}</td>
               {% endif %}
 
               <td>{{ info.direction }}</td>
