@@ -1,24 +1,25 @@
 {% extends 'layout/base.html' %}
 
 {% block content %}
-  <section class="jumbotron text-center" style="background-color:#ffffff;">
+<section class="jumbotron text-center" style="background-color:#ffffff;" xmlns="http://www.w3.org/1999/html">
     <div class="container">
       <h1 class="jumbotron-heading" style="font-family: 'Quicksand', sans-serif;">Your Blackbox</h1>
       <p class="lead text-muted" style="font-family: 'Noto Serif KR', serif;"> 지금 당신의 블랙박스 영상을 확인하세요.</p>
     </div>
   </section>
-  <div style="padding-left:480px">
-    <div class="form-group" style="margin-right:20px; float:left;">
+  <div style="text-align:center;">
+  <div style="display:inline-block">
+    <div class="form-group" style="width:150px; height:35px; vertical-align:middle; margin-right:10px; float:left;">
         <div class=" date" id="date_block">
-            <div class="input-group input-append date theme-square" id="datePicker" style="width:150px; border-radius:11px;">
-                <input value="날짜" type="text" class="form-control theme-square" name="date"  id="test" style="border:none; font-weight:bold; font-size:12pt;"/>
-                <span class="input-group-addon add-on" style="border:none; background-color:#ffffff;"><span class="glyphicon glyphicon-calendar"></span></span>
+            <div class="input-group input-append date button" id="datePicker" style="width:150px; height:35px;">
+                <input value="날짜" type="text" class="form-control button" name="date"  id="test"/>
+                <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
             </div>
         </div>
     </div>
-    <div style="float:left;">
-        <select class="theme-square" id="object" text="car" style="width:150px; height:35px; border-radius: 4px; margin-right:20px;" onchange="getobject(this)">
-          <option value="default">대상</option>
+    <div style="float:left;vertical-align:middle;">
+        <select class="button custom-select ff-hack" id="object" text="car" style="width:150px; height:35px; margin-right:10px;" onchange="getobject(this)">
+          <option value="default">대상을 선택하세요</option>
           <option value="car">자동차</option>
           <option value="person">사람</option>
           <option value="bicycle">자전거</option>
@@ -27,42 +28,44 @@
           <option value="dog">개</option>
           <option value="cat">고양이</option>
         </select>
-     <select class="theme-square" id="direction" style="width:150px; height:35px; border-radius: 4px; margin-right:20px;" >
-        <option value="default">방향</option>
-        <option value="left">left</option>
-        <option value="front">front</option>
-        <option value="right">right</option>
-      </select>
-      <select class="theme-square" id="color" disabled style="width:150px; height:35px; border-radius: 4px; margin-right:20px; color:#ccc;">
-        <option value="default">자동차 색깔</option>
-        <option value="black">black</option>
-        <option value="greenblue">green/blue</option>
-        <option value="browngold">brown/gold</option>
-        <option value="purplered">purple/red</option>
-        <option value="silverwhite">silver/white</option>
-      </select>
-      <select class="theme-square" id="weather" style="width:150px; height:35px; border-radius: 4px; margin-right:20px;">
-        <option value="default">날씨</option>
-        <option value="Clear">맑음</option>
-        <option value="Clouds">흐림</option>
-        <option value="Rain">비</option>
-        <option value="Snow">눈</option>
-        <option value="Thunderstrom">천둥</option>
-      </select>
+        <select class="button custom-select ff-hack" id="direction" style="width:150px; height:35px; margin-right:10px;" >
+          <option value="default">방향을 선택하세요</option>
+          <option value="left">left</option>
+          <option value="front">front</option>
+          <option value="right">right</option>
+        </select>
+        <select class="button custom-select ff-hack" id="color" disabled style="width:150px; height:35px; color:#ccc; margin-right:10px;">
+          <option value="default">자동차 색깔</option>
+          <option value="black">black</option>
+          <option value="greenblue">green/blue</option>
+          <option value="browngold">brown/gold</option>
+          <option value="purplered">purple/red</option>
+          <option value="silverwhite">silver/white</option>
+        </select>
+        <select class="button custom-select ff-hack" id="weather" style="width:150px; height:35px; margin-right:10px;">
+          <option value="default">날씨를 선택하세요</option>
+          <option value="Clear">맑음</option>
+          <option value="Haze">흐림</option>
+          <option value="Rain">비</option>
+          <option value="Snow">눈</option>
+          <option value="Thunderstrom">천둥</option>
+        </select>
     </div>
-    <input type="image" src="/static/images/map_icon2.png" style="width:35px; margin-right:20px;" id="mapicon">
+    <input type="image" src="/static/images/map_icon2.png" style="width:35px; margin-right:10px;" id="mapicon">
     <!-- The Modal -->
     <div id="myModal" class="map_modal">
       <!-- Modal content -->
       <div class="map_modal-content">
         <span class="close">&times;</span>
         <div id="map" style="width:100%;height:500px;"></div><br>
-        <div style="text-align:right;"> <button type="button" class="btn btn-primary" id="mapbutton" > OK </button></div>
+        <input id="gpsSearch" type="text" style="width:300px; height:35px; border-radius:2em;" placeholder="위치검색"><button class="btn btn-primary" style="margin-left:5px;" onclick="gps_search()">검색</button>
+        <div style="display:inline; float:right;"> <button type="button" style="height:35px;" id="mapbutton" > OK </button></div>
       </div>
     </div>
     <!-- modal end -->
-    <span class="glyphicon glyphicon-search" id="search" style="font-size:33px;" onclick="search()"></span><br>
+    <span class="glyphicon glyphicon-search" id="search" style="top:0; font-size:33px;" onclick="search()"></span><br>
     <div><input type="hidden" id="latitude" value="default"></input><input type="hidden" id="longitude" value="default"></input></div>
+  </div>
   </div>
 <br>
   <div class="album py-5 bg-light">
@@ -104,7 +107,7 @@
         </div>
       </div>
   </div>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ed8fa5da5fd034f8dd5dae36adba244"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7ed8fa5da5fd034f8dd5dae36adba244&libraries=services"></script>
 <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>-->
 <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  type="text/javascript" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
 
@@ -133,6 +136,7 @@
        }
 
         //map모달부분
+        var infowindow = new kakao.maps.InfoWindow({zIndex:1});
         var modal = document.getElementById('myModal');
         var date = document.getElementById('date_block');
          var btn = document.getElementById("mapicon");
@@ -168,6 +172,7 @@
             modal.style.display = "none";
             date.style.display="block";
 
+            $("#mapicon").attr("src", "/static/images/map_icon3.png");
         }
 
 
@@ -180,36 +185,80 @@
 
         var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-        // 지도를 클릭한 위치에 표출할 마커입니다
-        var marker = new daum.maps.Marker({
-            // 지도 중심좌표에 마커를 생성합니다
-            position: map.getCenter()
-        });
-        // 지도에 마커를 표시합니다
-        marker.setMap(map);
+        // 장소 검색 객체를 생성합니다
+        var ps = new kakao.maps.services.Places();
 
+        function gps_search(){
+           ps.keywordSearch($("#gpsSearch").val(), placesSearchCB);
+        }
+        // 키워드로 장소를 검색합니다
+        //ps.keywordSearch('숙대', placesSearchCB);
+        // 키워드 검색 완료 시 호출되는 콜백함수 입니다
+        function placesSearchCB (data, status, pagination) {
+            if (status === kakao.maps.services.Status.OK) {
+
+                var bounds = new kakao.maps.LatLngBounds();
+
+                for (var i=0; i<data.length; i++) {
+                    displayMarker(data[i]);
+                    bounds.extend(new kakao.maps.LatLng(data[i].y, data[i].x));
+                }
+
+                // 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+                map.setMaxLevel(10);
+                map.setBounds(bounds,0,0,0,0);            }
+        }
+
+        // 지도에 마커를 표시하는 함수입니다
+        function displayMarker(place) {
+
+            // 마커를 생성하고 지도에 표시합니다
+            var marker = new kakao.maps.Marker({
+                map: map,
+                position: new kakao.maps.LatLng(place.y, place.x)
+            });
+
+            // 마커에 클릭이벤트를 등록합니다
+            kakao.maps.event.addListener(marker, 'click', function() {
+                // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+                infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
+                infowindow.open(map, marker);
+
+                var label_lat = document.getElementById('latitude');
+                var label_long = document.getElementById('longitude');
+                label_lat.value = place.y;
+                label_long.value = place.x;
+
+                var message = '클릭한 위치의 위도는 ' + place.y + ' 이고, ';
+                message += '경도는 ' + place.x + ' 입니다';
+                console.log(message);
+            });
+        }
+
+        var marker = new kakao.maps.Marker({
+            map: map
+        });
         // 지도에 클릭 이벤트를 등록합니다
         // 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
-        daum.maps.event.addListener(map, 'click', function(mouseEvent) {
-
+        kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
             // 클릭한 위도, 경도 정보를 가져옵니다
             var latlng = mouseEvent.latLng;
 
             // 마커 위치를 클릭한 위치로 옮깁니다
             marker.setPosition(latlng);
-            var lati =  latlng.getLat();
-            var longi = latlng.getLng();
+            marker.setMap(map);
 
-            var message = '클릭한 위치의 위도는 ' + lati + ' 이고, ';
-            message += '경도는 ' + longi + ' 입니다';
+            var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
+            message += '경도는 ' + latlng.getLng() + ' 입니다';
             console.log(message);
 
             var label_lat = document.getElementById('latitude');
             var label_long = document.getElementById('longitude');
-            label_lat.value = lati;
-            label_long.value = longi;
-
+            label_lat.value = latlng.getLat();
+            label_long.value = latlng.getLng();
         });
+
+
 
     $('#datePicker')
         .datepicker({

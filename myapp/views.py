@@ -46,8 +46,11 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
         headers = {'Authorization': 'KakaoAK 3c99460ffccf7879bc9718eee123a66d'}
         result = json.loads(str(requests.get(url, headers=headers).text))
         print(result)
-        match_first = result['documents'][0]['road_address']['address_name']
-        info.location = match_first
+        if(result['documents'][0]['road_address']):
+            info.location =result['documents'][0]['road_address']['address_name']
+        else:
+            info.location =result['documents'][0]['address']['address_name']
+
         print(info.location)
 
         info_arr = [info.object, info.direction, info.weather, info.color]
@@ -57,8 +60,28 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
         info.match = 0
         for tmp in filter_arr:
             i+=1
-            # if i == 3 and ch != 3:
-            if i == 3:
+            if tmp == "default" and i!=3:
+                ch += 1
+
+            elif i == 1:
+                if tmp == "left":
+                    if info.direction == "left" or info.direction == "leftfront":
+                        pass
+                    else:
+                        break
+                elif tmp == "right":
+                    if info.direction == "right" or info.direction == "rightfront":
+                        pass
+                    else:
+                        break
+                elif tmp == "front":
+                    if info.direction == "front":
+                        pass
+                    else:
+                        info.match=-1
+                        break
+
+            elif i == 3:
                 if tmp == "default":
                     if ch !=2:
                         info.match = 1
@@ -86,15 +109,22 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
                         info.color = "White"
                         info.match = 1
 
-            elif tmp == "default":
-                ch += 1
             elif tmp != info_arr[i]:
+                info.match=-1
                 break
+
+        print("=----")
+        print(info.match)
 
         if lati == "default" and longi == "default":
             pass
+        elif ch!=3:
+            pass
         else:
             for info in infos:
+                if info.match == -1:
+                    pass
+
                 lat = info.latitude
                 lon = info.longitude
 
@@ -103,6 +133,9 @@ def detail(request,videoid, date, object, color, direction, weather, lati, longi
                 else:
                     info.match = 0
 
+
+        print(info.match)
+        print("=----")
 
 
 
@@ -162,9 +195,9 @@ def search(request,date,object,color,direction,weather,lati,longi):
 
     if direction != "default":
         if direction == "left":
-            infos = infos.filter(direction__contains=direction)
+            infos = infos.filter(direction__in=["left", "leftfront"])
         if direction == "right":
-            infos = infos.filter(direction__contains=direction)
+            infos = infos.filter(direction__in=["right", "rightfront"])
         if direction == "front":
             infos = infos.filter(direction=direction)
 

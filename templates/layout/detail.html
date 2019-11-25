@@ -14,7 +14,7 @@
 
   <h2 style="font-family: 'Quicksand', sans-serif;">Data List</h2>
       <div class="table-responsive" style="text-align:left; font-family: 'Noto Serif KR', serif; ">
-        <table class="table table-striped table-sm" id="detail-table">
+        <table class="table table-hover table-sm" id="detail-table">
           <thead>
             <tr>
               <th>Time</th>
@@ -63,13 +63,43 @@
           </tbody>
         </table>
       </div>
-
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.10.2/validator.min.js"></script>-->
 <script>
 
+var x = document.getElementById("testvideo");
+
+video.onloadeddata = function() {
+  video.pause();
+  // TweenLite.to(video, 1, { currentTime: video.duration });
+
+  $(window).on("click", function() {
+    var duration = video.duration - video.currentTime;
+    TweenLite.to(video, duration, { currentTime: video.duration });
+  });
+
+  $(window).on("dblclick", function() {
+    var duration = video.currentTime;
+    TweenLite.to(video, duration, { currentTime: 0 });
+  });
+
+};
+
 function setCurTime(frame) {
-      var x = document.getElementById("testvideo");
-      x.currentTime = frame/9.3;
-      console.log(frame);
+      //var x = document.getElementById("testvideo");
+      console.log(x.currentTime);
+      <!--x.play();-->
+      //x.currentTime = frame/9.3;
+       x.currentTime = frame/7;
+       $('html').scrollTop(0);
+
+
+      <!--var timer = setInterval(function() {-->
+        <!--if (x.paused && x.readyState ==4 || !x.paused) {-->
+            <!--x.play();-->
+            <!--clearInterval(timer);-->
+            <!--console.log(timer);-->
+        <!--}-->
+      <!--}, 50);-->
 }
 
 </script>
